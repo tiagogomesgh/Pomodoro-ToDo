@@ -5,9 +5,367 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("C:\Users\Tiago Gomes\Desktop\Pomodoro\Pomodoro v4\pomodoro-v4\src\pictures\smoke.png"); */
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  color:whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: rgb(63, 43, 109);
+  background: radial-gradient(box-shadow, #1E2140 0%, #151932 65%);  */
+  border-style:solid;
+  border-width: 1.5rem;
+  border-radius: 0rem;
+  border-color: #50426e;
+  background-image: url("C:\Users\Tiago Gomes\Desktop\Pomodoro\Pomodoro v4\pomodoro-v4\src\pictures\smoke.png");
+  background-size: cover;
+  
+}
+
+.container h1 {
+  font-size:4.6rem;
+  margin-bottom:7rem;
+  font-family: monospace;
+  border-style:solid;
+  /* border-color: radial-gradient(box-shadow, #1E2140 0%, #151932 65%); */
+  border-radius: 10rem;
+  background:  linear-gradient(to right, rgb(61, 26, 117), rgba(52, 0, 73, 0.788));
+  
+  
+
+  
+  
+}
+
+.container .labels {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding:.3rem .3rem;
+  background-color: #0C0E1B;
+  border-radius: 1.5rem;
+}
+
+.active-label {
+  color: #0C0E1B;
+  background-color: #0882a3;
+}
+
+.timer-container {
+  display: flex;
+  flex:2;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.time-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 7.5rem;
+  color:#efefef;
+  background: #151932;
+  font-size: 4.5rem;
+  font-family: monospace;
+  
+  /* box-shadow: 1rem 1.5rem 2rem rgba(0,0,0,0.6) */
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:5rem
+}
+
+button {
+  color:whitesmoke;
+  font-size:1.5rem;
+  padding: 0.5rem 1.2rem;
+  border:none;
+  border-radius:3rem;
+  margin:1rem;;
+  background:#0C0E1B;
+  min-width: 80px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.button-wrapper button.activve {
+  color: #0C0E1B;
+  background-color: linear-gradient(to right, rgb(0, 81, 255), rgba(52, 0, 73, 0.788));
+  border: 2px solid #0C0E1B;
+  margin:2rem;
+}
+.form-container {
+  text-align: center;
+}
+.input-wrapper {
+  margin: 1.5rem;
+}
+.input-wrapper input {
+  height: 200px;
+  width: 200px;
+  padding: 2rem;
+  background-color: indigo;
+  color:#C9CCEA;
+  border: none;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  text-align: center;
+  font-size: 26pt;
+  font-family: monospace;
+}
+
+
+
+  /* EXPERIMENTAL */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+      ;
+  }
+  
+  body {
+    background-image: url("C:\Users\Tiago Gomes\Desktop\Pomodoro\Pomodoro v4\pomodoro-v4\src\pictures\smoke.png");
+    text-align: center;
+    background-size: cover;
+    /* background: linear-gradient(
+      90deg,
+      rgb(140, 16, 255) 0%,
+      rgba(100, 115, 255, 1) 100%
+      
+    ); */
+  }
+  .todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 520px;
+    min-height: 600px;
+    background: #161a2b;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: rgb(63, 43, 109);
+    background: radial-gradient(box-shadow, #1E2140 0%, #151932 65%);  */
+    border-style:solid;
+    border-width: 1.5rem;
+    border-radius: 0rem;
+    border-color: #50426e;
+    background-image: url("C:\Users\Tiago Gomes\Desktop\Pomodoro\Pomodoro v4\pomodoro-v4\src\pictures\smoke.png");
+    background-size: cover;
+  }
+  
+  h1 {
+    margin: 32px 0;
+    color: #fff;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+  
+  .todo-form {
+    margin-bottom: 32px;
+  }
+  
+  .todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+  }
+  
+  .todo-input::placeholder {
+    color: #e2e2e2;
+  }
+  
+  .todo-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .todo-input.edit {
+    border: 2px solid #149fff;
+  }
+  
+  .todo-button.edit {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
+    );
+    padding: 16px 22px;
+  }
+  
+  .todo-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      rgb(255, 118, 20) 0%,
+      rgba(255, 84, 17, 1) 100%
+    );
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+  
+  .todo-row:nth-child(4n + 1) {
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+    );
+  }
+  
+  .todo-row:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 12, 241, 1) 0%,
+      rgba(250, 0, 135, 1) 100%
+    );
+  }
+  
+  .todo-row:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
+    );
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .edit-icon {
+    color: #fff;
+  }
+
+  /* FOOTER ICONS */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 50rem;
+    justify-content: center;
+    padding-right: 30;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    /* border-radius: 50rem; */
+    justify-content: center;
+    padding-right: 30;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    /* border-radius: 50rem; */
+    justify-content: center;
+    padding-right: 30;
+  }
+
+  .fa-google {
+    background: darkslategrey;
+    color: white;
+    /* border-radius: 50rem; */
+    justify-content: center;
+    padding-right: 30;
+  }
+
+  .fa-vimeo {
+    background: maroon;
+    color: white;
+    /* border-radius: 50rem; */
+    justify-content: center;
+    padding-right: 30;
+  }
+
+  .footer {
+    border-style:solid;
+    border-width: 1.5rem;
+    border-radius: 0rem;
+    border-color: #50426e;  
+  }
+
+  
